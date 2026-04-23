@@ -13,6 +13,11 @@ const validateName = (event) => {
         return;
     }
 
+    if (nameInput.value.length > 5) {
+        errorMessage.textContent = '名前は5文字以下で入力してください';
+        return;
+    }
+
     successMessage.textContent = '送信されました';
     nameInput.value = '';
 };
