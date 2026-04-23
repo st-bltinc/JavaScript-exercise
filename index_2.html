@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>名前入力フォーム</title>
+    <link rel="stylesheet" href="style_2.css">
 </head>
 
 <body>
     <form id="nameForm">
-        <label for="name">名前</label>
-        <input type="text" id="name" name="name" required>
+        <div class="form-group">
+            <label for="name">名前</label>
+            <input type="text" id="name" name="name" required>
+        </div>
         <p id="errorMessage" class="error-message"></p>
         <p id="successMessage" class="success-message"></p>
         <button type="submit">送信</button>
