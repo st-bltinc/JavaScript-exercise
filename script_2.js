@@ -8,17 +8,19 @@ const validateName = (event) => {
     errorMessage.textContent = '';
     successMessage.textContent = '';
 
-    if (!nameInput.value.trim()) {
+    const trimmedValue = nameInput.value.trim();
+
+    if (!trimmedValue) {
         errorMessage.textContent = '名前を入力してください';
         return;
     }
 
-    if (nameInput.value.length < 3) {
+    if (trimmedValue.length < 3) {
         errorMessage.textContent = '名前は3文字以上で入力してください';
         return;
     }
 
-    if (nameInput.value.length > 5) {
+    if (trimmedValue.length > 5) {
         errorMessage.textContent = '名前は5文字以下で入力してください';
         return;
     }
