@@ -8,6 +8,11 @@ const validateName = (event) => {
     errorMessage.textContent = '';
     successMessage.textContent = '';
 
+    if (!nameInput.value.trim()) {
+        errorMessage.textContent = '名前を入力してください';
+        return;
+    }
+
     if (nameInput.value.length < 3) {
         errorMessage.textContent = '名前は3文字以上で入力してください';
         return;
@@ -20,6 +25,7 @@ const validateName = (event) => {
 
     successMessage.textContent = '送信されました';
     nameInput.value = '';
+
 };
 
 document.getElementById('nameForm').addEventListener('submit', validateName);
